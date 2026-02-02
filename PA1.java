@@ -108,6 +108,10 @@ public class PA1 {
 
                 while (!Q.isEmpty()) {
                     // queue logic as per slides.
+                    String u = Q.poll();
+                    System.out.println("Processing node: " + u);
+                    List<String> Adj_u = graph.getOrDefault(u, new ArrayList<>());
+
                 }
 
             }

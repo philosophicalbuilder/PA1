@@ -84,6 +84,15 @@ public class PA1 {
                 Queue<String> Q = new LinkedList<>();
 
                 // adding enum
+                // preprocessing for all nodes - setting up initial state.
+                // prof said white is unprocessed. New/fresh.
+                // for all nodes v in the group of nodes, put white for their color
+                // put their distance as infinity and their parent as null.
+                for (String v : nodes) {
+                    color.put(v, Color.WHITE);
+                    d.put(v, Integer.MAX_VALUE);
+                    pi.put(v, null);
+                }
 
             }
         }

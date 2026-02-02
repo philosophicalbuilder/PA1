@@ -94,6 +94,18 @@ public class PA1 {
                     pi.put(v, null);
                 }
 
+                /*
+                 * Now, set source color as defaults from enum.
+                 * grey color as it's the first node being put in the queue.
+                 * distance from itself is 0.
+                 * doesn't have a parent so pi is null.
+                 * and now we offer the source.
+                 */
+                color.put(source, Color.GRAY);
+                d.put(source, 0);
+                pi.put(source, null);
+                Q.offer(source);
+
             }
         }
     }

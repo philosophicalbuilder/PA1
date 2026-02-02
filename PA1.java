@@ -22,6 +22,12 @@ class Pair {
 
 public class PA1 {
 
+    enum Color {
+        WHITE,
+        GRAY,
+        BLACK
+    }
+
     public static void main(String[] args) {
 
         Scanner stdin = new Scanner(System.in);
@@ -69,13 +75,15 @@ public class PA1 {
                 String destination = query.t;
 
                 /*
-                BFS from slides: color, d, pi. Will use INTEGER.MAX_VALUE for d. 
-                Q is regular q, linkedlist version. 
-                */
-               Map<String, String> color = new HashMap<>();
-               Map<String, Integer> d = new HashMap<>();
-               Map<String, String> pi = new HashMap<>();
-               Queue<String> q = new LinkedList<>();
+                 * BFS from slides: color, d, pi. Will use INTEGER.MAX_VALUE for d.
+                 * Q is regular q, linkedlist version.
+                 */
+                Map<String, Color> color = new HashMap<>();
+                Map<String, Integer> d = new HashMap<>();
+                Map<String, String> pi = new HashMap<>();
+                Queue<String> Q = new LinkedList<>();
+
+                // adding enum
 
             }
         }

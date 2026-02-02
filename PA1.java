@@ -64,7 +64,10 @@ public class PA1 {
                 graph.get(edge.t).add(edge.s);
             }
 
-            
+            for(Pair query : queries) {
+                String source = ""; 
+                String destination =""; 
+                //implement bfs but match for slides 
 
         }
     }

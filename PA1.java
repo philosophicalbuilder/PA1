@@ -106,6 +106,10 @@ public class PA1 {
                 pi.put(source, null);
                 Q.offer(source);
 
+                while (!Q.isEmpty()) {
+                    // queue logic as per slides.
+                }
+
             }
         }
     }

@@ -65,9 +65,10 @@ public class PA1 {
             }
 
             for(Pair query : queries) {
-                String source = ""; 
-                String destination =""; 
-                //implement bfs but match for slides 
+                String source = query.s;
+                String destination = query.t;
+                
+               //
 
         }
     }

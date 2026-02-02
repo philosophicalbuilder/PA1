@@ -57,6 +57,14 @@ public class PA1 {
             System.out.println("");
 
             // YOUR CODE HERE (or called from here)
+            Map<String, List<String>> graph = new HashMap<>();
+
+            for (Pair edge : edges) {
+                graph.get(edge.s).add(edge.t);
+                graph.get(edge.t).add(edge.s);
+            }
+
+            
 
         }
     }

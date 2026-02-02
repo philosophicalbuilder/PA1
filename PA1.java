@@ -64,12 +64,20 @@ public class PA1 {
                 graph.get(edge.t).add(edge.s);
             }
 
-            for(Pair query : queries) {
+            for (Pair query : queries) {
                 String source = query.s;
                 String destination = query.t;
-                
-               //
 
+                /*
+                BFS from slides: color, d, pi. Will use INTEGER.MAX_VALUE for d. 
+                Q is regular q, linkedlist version. 
+                */
+               Map<String, String> color = new HashMap<>();
+               Map<String, Integer> d = new HashMap<>();
+               Map<String, String> pi = new HashMap<>();
+               Queue<String> q = new LinkedList<>();
+
+            }
         }
     }
 }

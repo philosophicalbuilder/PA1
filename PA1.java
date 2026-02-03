@@ -70,10 +70,23 @@ public class PA1 {
                 graph.get(edge.t).add(edge.s);
             }
 
+            // creating a cache for BFS results.
+            Map<String, Map<String, Integer>> distanceCache = new HashMap<>();
+            Map<String, Map<String, String>> parentCache = new HashMap<>();
+
             for (Pair query : queries) {
                 String source = query.s;
                 String destination = query.t;
 
+                if (!distanceCache.containsKey(source)) {
+
+                    // 3 maps - color, d, pi. Each are <String, X> respectively.
+                    // X is either Color, Integer, or String.
+                    Map<String, Color> color = new HashMap<>();
+                    Map<String, Integer> d = new HashMap<>();
+                    Map<String, String> pi = new HashMap<>();
+
+                }
                 /*
                  * BFS from slides: color, d, pi. Will use INTEGER.MAX_VALUE for d.
                  * Q is regular q, linkedlist version.

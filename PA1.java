@@ -150,10 +150,21 @@ public class PA1 {
                             Q.offer(v);
                         }
                     }
-                    //if thats not the case, and it was already processing, then its black. 
-                    //update its color for later reference.
+                    // if thats not the case, and it was already processing, then its black.
+                    // update its color for later reference.
                     color.put(u, Color.BLACK);
 
+                }
+
+                // converting distance values before storing them in the cache.
+                // because unreachable nodes get distance max val, just use -1.
+                Map<String, Integer> finalDistances = new HashMap<>();
+                for (String v : nodes) {
+                    if (d.get(v) == Integer.MAX_VALUE) {
+                        finalDistances.put(v, Integer.MAX_VALUE);
+                    } else {
+                        finalDistances.put(v, d.get(v));
+                    }
                 }
 
             }

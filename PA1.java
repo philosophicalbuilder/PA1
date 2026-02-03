@@ -204,6 +204,10 @@ public class PA1 {
         String current = destination;
         String parent = pi.get(current);
 
+        if (pi.get(destination) == null) {
+            return null;
+        }
+
         boolean reachedSource = false;
         while (parent != null) {
             if (parent.equals(source)) {

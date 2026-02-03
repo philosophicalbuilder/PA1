@@ -165,6 +165,13 @@ public class PA1 {
                     } else {
                         finalDistances.put(v, d.get(v));
                     }
+                    // cache so that we don't run BFS on same source node agian.
+                    distanceCache.put(source, finalDistances);
+                    // then store all parent pointers from this source.
+                    parentCache.put(source, pi);
+                    // this is a map recording "whose this node's parent?"
+                    // without this pointer - we only know "v3 is 3 hops away from v0"
+                    // however we don't the path we took - so parent cache is a call back to that.
                 }
 
             }

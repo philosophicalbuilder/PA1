@@ -139,6 +139,21 @@ public class PA1 {
                     System.out.println("Processing node: " + u);
                     List<String> Adj_u = graph.getOrDefault(u, new ArrayList<>());
 
+                    // for a node v - loop through its neighbours stored in adj list.
+                    // if that color is white then put it into processing.
+                    // record its distance and parent and offer it to the queue.
+                    for (String v : Adj_u) {
+                        if (color.get(v) == Color.WHITE) {
+                            color.put(v, Color.GRAY);
+                            d.put(v, d.get(u) + 1);
+                            pi.put(v, u);
+                            Q.offer(v);
+                        }
+                    }
+                    //if thats not the case, and it was already processing, then its black. 
+                    //update its color for later reference.
+                    color.put(u, Color.BLACK);
+
                 }
 
             }

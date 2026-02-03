@@ -201,6 +201,18 @@ public class PA1 {
 
     private static String methodForHop(Map<String, String> pi, String source, String destination) {
 
+        String current = destination;
+        String parent = pi.get(current);
+
+        boolean reachedSource = false;
+        while (parent != null) {
+            if (parent.equals(source)) {
+                reachedSource = true;
+            } else {
+                current = parent;
+            }
+        }
+
     } // not implemented yet.
 
 }

@@ -87,12 +87,18 @@ public class PA1 {
                     Map<String, String> pi = new HashMap<>();
                     Queue<String> Q = new ArrayDeque<>();
 
-                    //Map being brought to default state for all nodes. 
+                    // Map being brought to default state for all nodes.
                     for (String v : nodes) {
                         color.put(v, Color.WHITE);
                         d.put(v, Integer.MAX_VALUE);
                         pi.put(v, null);
                     }
+
+                    color.put(source, Color.GRAY);
+                    d.put(source, 0);
+
+                    pi.put(source, null);
+                    Q.offer(source);
 
                 }
                 /*

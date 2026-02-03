@@ -176,14 +176,13 @@ public class PA1 {
 
                 Map<String, Integer> d = distanceCache.get(source);
                 Map<String, String> pi = parentCache.get(source);
-                
+
                 // Find next hop
                 int distance = d.get(destination);
-                if (distance == -1) { //bfs never reached it. 
+                if (distance == -1) { // bfs never reached it.
                     System.out.println(source + " " + destination + " None None");
-                }
-                else {
-                    String nextHop = methodForHop(pi, source, destination); //not implemented
+                } else {
+                    String nextHop = methodForHop(pi, source, destination); // not implemented
                     if (nextHop == null) {
                         System.out.println(source + " " + destination + " None None");
                     } else {
@@ -196,10 +195,12 @@ public class PA1 {
                 System.out.println();
             }
 
-            }
-
-            
-
         }
+
     }
+
+    private static String methodForHop(Map<String, String> pi, String source, String destination) {
+
+    } // not implemented yet.
+
 }

@@ -161,7 +161,7 @@ public class PA1 {
                 Map<String, Integer> finalDistances = new HashMap<>();
                 for (String v : nodes) {
                     if (d.get(v) == Integer.MAX_VALUE) {
-                        finalDistances.put(v, Integer.MAX_VALUE);
+                        finalDistances.put(v, -1);
                     } else {
                         finalDistances.put(v, d.get(v));
                     }

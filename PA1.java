@@ -55,12 +55,13 @@ public class PA1 {
             for (int j = 0; j < q; j++)
                 queries.add(new Pair(stdin.next(), stdin.next()));
 
-            System.out.println("test case " + i + ":");
-            System.out.println("there are " + n + " nodes, " + e + " edges, and " + q + " queries");
-            System.out.println("the nodes are: " + nodes);
-            System.out.println("the edges are: " + edges);
-            System.out.println("the queries are: " + queries);
-            System.out.println("");
+            // System.out.println("test case " + i + ":");
+            // System.out.println("there are " + n + " nodes, " + e + " edges, and " + q + "
+            // queries");
+            // System.out.println("the nodes are: " + nodes);
+            // System.out.println("the edges are: " + edges);
+            // System.out.println("the queries are: " + queries);
+            // System.out.println("");
 
             // YOUR CODE HERE (or called from here)
             Map<String, List<String>> graph = new HashMap<>();
@@ -123,7 +124,7 @@ public class PA1 {
                     while (!Q.isEmpty()) {
                         // queue logic as per slides.
                         String u = Q.poll();
-                        System.out.println("Processing node: " + u);
+                        // System.out.println("Processing node: " + u);
                         List<String> Adj_u = graph.getOrDefault(u, new ArrayList<>());
 
                         // for a node v - loop through its neighbours stored in adj list.
